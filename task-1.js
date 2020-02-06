@@ -10,7 +10,7 @@
 // Категория: Животные
 // Количество элементов: 4
 
-const numbersOfItem = document.querySelectorAll("li.item");
+const numbersOfItem = document.querySelectorAll("#categories .item");
 console.log(`В списке ${numbersOfItem.length} категории`);
 
 numbersOfItem.forEach(item => {

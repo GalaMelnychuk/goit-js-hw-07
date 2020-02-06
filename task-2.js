@@ -1,9 +1,28 @@
 "use strict";
-import users from "./users.js";
-// Получить массив объектов пользователей по цвету глаз (поле eyeColor).
+// В HTML есть пустой список ul#ingredients.
 
-const getUsersWithEyeColor = (users, color) => {
-  return users.filter(user => user.eyeColor === color);
-};
+// <ul id="ingredients"></ul>
+// В JS есть массив строк.
 
-console.log(getUsersWithEyeColor(users, "blue"));
+// Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, после чего вставит все li за одну операцию в список ul.ingredients. Для создания DOM-узлов используй document.createElement().
+
+const ingredients = [
+  "Картошка",
+  "Грибы",
+  "Чеснок",
+  "Помидоры",
+  "Зелень",
+  "Приправы"
+];
+
+const hrefIngredients = document.querySelector("#ingredients");
+
+const fragment = document.createDocumentFragment();
+
+ingredients.forEach(item => {
+  const listItem = document.createElement("li");
+  listItem.textContent = item;
+  fragment.append(listItem);
+});
+
+hrefIngredients.appendChild(fragment);
