@@ -20,4 +20,4 @@ function handleInput(event) {
   }
 }
 
-input.addEventListener("change", handleInput);
+input.addEventListener("input", handleInput);
