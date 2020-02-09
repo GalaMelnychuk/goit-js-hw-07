@@ -1,13 +1,23 @@
 #gallery {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
 }
-
 
 .gallery--img {
-    width: 350px;
-    height: 200px;
+  width: 350px;
+  height: 200px;
+}
+#validation-input {
+  border: 3px solid #bdbdbd;
 }
 
+#validation-input.valid {
+  border-color: #4caf50;
+  outline: 3px;
+}
 
+#validation-input.invalid {
+  border-color: #f44336;
+  outline: 3px;
+}
