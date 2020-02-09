@@ -9,15 +9,26 @@
   /* <input type="text" id="validation-input" data-length="6" placeholder="Введи 6 символов"/> */
 }
 
-const length = document.querySelector("[data-length]");
 const input = document.querySelector("#validation-input");
 input.classList.add("invalid");
 function handleInput(event) {
-  if (length.value.length >= 6) {
+  if (input.value.length >= 6) {
     input.classList.replace("invalid", "valid");
-  } else if (length.value.length < 6) {
+  } else if (input.value.length < 6) {
     input.classList.replace("valid", "invalid");
   }
 }
 
-input.addEventListener("input", handleInput);
+input.addEventListener("change", handleInput);
+
+// Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
+
+const text = document.querySelector("#text");
+const fontSizeControl = document.querySelector("#font-size-control");
+console.log(fontSizeControl.style.fontSize);
+
+function rangeFontSize(event) {
+  text.style.fontSize = fontSizeControl.value + "px";
+}
+
+fontSizeControl.addEventListener("input", rangeFontSize);
