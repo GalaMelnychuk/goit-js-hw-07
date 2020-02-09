@@ -11,10 +11,8 @@
 
 const length = document.querySelector("[data-length]");
 const input = document.querySelector("#validation-input");
-console.dir(length);
-
+input.classList.add("invalid");
 function handleInput(event) {
-  input.classList.add("invalid");
   if (length.value.length >= 6) {
     input.classList.replace("invalid", "valid");
   } else if (length.value.length < 6) {
