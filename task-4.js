@@ -16,11 +16,9 @@ let counterValue = 0;
 
 function handleClickDecrement(event) {
   clickValue.textContent = counterValue -= 1;
-  return buttonDecrement.textContent;
 }
 function handleClickIncrement(event) {
   clickValue.textContent = counterValue += 1;
-  return buttonDecrement.textContent;
 }
 
 buttonDecrement.addEventListener("click", handleClickDecrement);
