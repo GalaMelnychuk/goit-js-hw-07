@@ -10,13 +10,12 @@
 }
 
 const input = document.querySelector("#validation-input");
-console.log(input.dataset.length);
 input.classList.add("invalid");
 function handleInput(event) {
   if (input.value.length == input.dataset.length) {
     input.classList.replace("invalid", "valid");
   } else {
-    input.classList.replace("valid", "invalid" );
+    input.classList.replace("valid", "invalid");
   }
 }
 
