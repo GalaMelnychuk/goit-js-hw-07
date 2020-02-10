@@ -19,4 +19,4 @@ function handleInput(event) {
   }
 }
 
-input.addEventListener("input", handleInput);
+input.addEventListener("blur", handleInput);

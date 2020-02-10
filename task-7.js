@@ -8,4 +8,4 @@ function rangeFontSize(event) {
   text.style.fontSize = fontSizeControl.value + "px";
 }
 
-fontSizeControl.addEventListener("input", rangeFontSize);
+fontSizeControl.addEventListener("blur", rangeFontSize);
