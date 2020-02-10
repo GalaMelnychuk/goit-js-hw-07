@@ -5,8 +5,6 @@ const text = document.querySelector("#text");
 const fontSizeControl = document.querySelector("#font-size-control");
 
 function rangeFontSize(event) {
-  console.dir(fontSizeControl);
-  console.log(fontSizeControl.value);
   text.style.fontSize = fontSizeControl.value + "px";
 }
 
